@@ -1,0 +1,22 @@
+clc;clear;
+hold on;
+x1=[-1:0.1:1];
+x2=[-1:0.1:1];
+for i=1:21
+    for j=1:21
+        y(j,i)=f(x1(i),x2(j));
+    end
+end
+contour(x1,x2,y,20)
+
+lambda=0.1;
+x=[1 1]
+
+while x>(1e-10)
+    plot(x(1),x(2),'b.');
+    f1=f(x(1), x(2));
+    dx=df(x(1), x(2))
+    x=x-lambda*dx
+    f2=f(x(1), x(2));
+    if 
+end
